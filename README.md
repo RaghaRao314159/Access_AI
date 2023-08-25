@@ -34,7 +34,7 @@ http://ragha.pythonanywhere.com
 <br />
 <div align="center">
   <a href="https://github.com/RaghaRao314159/Access_AI">
-    <img src="static/images/steep.jpg" alt="Logo" width="80" height="80">
+    <img src="static/images/steep.jpg" alt="Logo" width="200" height="120">
   </a>
 
   <h3 align="center">ACCESS AI</h3>
@@ -216,7 +216,7 @@ Ragha Rao - ragharao2001@gmail.com
 [stars-url]: https://github.com/RaghaRao314159/Access_AI/stargazers
 [issues-shield]: https://img.shields.io/github/issues/RaghaRao314159/Access_AI.svg?style=for-the-badge
 [issues-url]: https://github.com/RaghaRao314159/Access_AI/issues
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: static/images/screenshot.png
 [StableCode]: https://img.shields.io/badge/StableCode-ff0000
 [StableCode-url]: https://huggingface.co/stabilityai/stablecode-instruct-alpha-3b
 [Flask]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
