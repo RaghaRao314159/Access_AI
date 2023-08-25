@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ACCESS AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("{{url_for('static',filename='images/steep.jpg')}}");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.test_form input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+
+  .test_form [type=text]:focus {
+  border: 3px solid #092a63;
+  }
+  
+  .test_form input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .test_form input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .test_form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><i class="fa fa-home"></i>ACCESS AI</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#test" class="w3-bar-item w3-button"><i class="fa fa-th"></i> TRY IT</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#test" onclick="w3_close()" class="w3-bar-item w3-button">TRY IT</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Access AI</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Access AI</span><br>
+    <span class="w3-xlarge">Teaches you how to code your own AI.</span><br>
+    <span class="w3-large">Do you find code documentation overwhelming?</span><br>
+    <span class="w3-large">Not sure what to ask Chat GPT?</span><br>
+    <span class="w3-large">This is a one stop tutor that teaches you coding.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <a href="https://www.linkedin.com/in/ragha-rao-b605aa184/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE PROJECT</h3>
+  <p class="w3-center w3-large">Key features of this project</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-half">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Innovation</p>
+      <p>Using stablecode from Stability AI, ACCESS AI provides code with explanation to make your own AI.</p>
+    </div>
+    <div class="w3-half">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Motivation</p>
+      <p>For high school students and those outside of computer science, understanding the syntax behind machine learning can be a steep learning curve. This project aims to help bridge that gap.</p>
+    </div>
+  </div>
+</div> 
+
+
+<!-- Test Section -->
+<div class="w3-container" style="padding:128px 16px" id="test">
+  <h3 class="w3-center">DESIGN YOUR OWN AI</h3>
+  <form class = "test_form" enctype="multipart/form-data" action='#prompt' method="POST">
+
+    <label for="">What task do you want to accomplish?</label>
+    <select id="task" name="task">
+      <option value="Classification">Classification (predict a category)</option>
+      <option value="Regression">Regression (predict a quantity)</option>
+    </select> <br><br><br>
+
+    <label for="">How much training data do you have?</label>
+    <select id="data" name="data" onchange="showDiv(this)">
+      <option value="Machine Learning">Below 1000 (Better to use traditional Machine Learning)</option>
+      <option value="Deep Learning">Above 1000 (Lets try Deep Learning)</option>
+    </select> <br><br><br>
+
+    <div id="deep_library" style="display:none;">
+      <label for="">Which library do you want to use?</label>
+      <select name="deep_library">
+        <option value="Tenserflow">Tenserflow (designed by Google)</option>
+        <option value="Pytorch">Pytorch (designed by Meta)</option>
+      </select>
+    </div> 
+    
+
+    <input type="submit" name="submit" value="Give me the python code">
+  </form> 
+
+  <script type="text/javascript">
+    function showDiv(select){
+       if(select.value=="Deep Learning"){
+        document.getElementById('deep_library').style.display = "block";
+       } else{
+        document.getElementById('deep_library').style.display = "none";
+       }
+    } 
+  </script>
+</div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:256px 16px" id="prompt">
+  <h3>Go to <a href = "https://colab.research.google.com/drive/1B0A1RvV2K7Sj0glRuZhatMKSRHucWI5z?usp=sharing" target="_blank">this link</a> and paste this prompt</h3>
+  <div style="background-color: #333333;">
+    <span class="w3-large">{{prompt}}</span>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Facing difficulties, have a suggestion or want to collaborate? Send us a message.</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Singapore </p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>ragharao2001@gmail.com</p>
+    <p><i class="fa fa-user fa-fw w3-xxlarge w3-margin-right"> </i><a href="https://github.com/RaghaRao314159/Access_AI" target="_blank">Github</a></p>
+    <br>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.linkedin.com/in/ragha-rao-b605aa184/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
